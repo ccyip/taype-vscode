@@ -3,6 +3,7 @@
   "displayName": "Taype Lang",
   "description": "Syntax highlighting for taype lang",
   "version": "0.0.1",
+  "repository": "https://github.com/ccyip/taype-vscode",
   "engines": {
     "vscode": "^1.73.0"
   },
