@@ -1,0 +1,96 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Taype",
+	"patterns": [
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#keywords"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"match": "\\b(data|fn|obliv)\\b",
+					"name": "keyword.other.taype"
+				},
+				{
+					"name": "keyword.control.taype",
+					"match": "\\b(let|in|if|then|else|mux|case|of|end|tape)\\b"
+				},
+				{
+					"name": "keyword.control.obliv.taype",
+					"match": "`(if|case)\\b"
+				},
+				{
+					"name": "support.type.taype",
+					"match": "\\b(unit|bool|int)\\b"
+				},
+				{
+					"name": "support.type.obliv.taype",
+					"match": "`(bool|int)\\b"
+				},
+				{
+					"name": "keyword.operator.taype",
+					"match": "(\\\\|->|:|=|\\||,|<=|==|\\+|-|\\*|/|&&|\\|\\|)"
+				},
+				{
+					"name": "keyword.operator.obliv.taype",
+					"match": "`(<=|==|\\+|-|\\*|/|&&|\\|\\|)"
+				},
+				{
+					"name": "support.function.taype",
+					"match": "\\b(not|s_bool|r_bool|s_int|r_int)\\b"
+				},
+				{
+					"name": "support.function.obliv.taype",
+					"match": "`not\\b"
+				},
+				{
+					"name": "constant.numeric.taype",
+					"match": "[\\d]+"
+				},
+				{
+					"name": "constant.language.taype",
+					"match": "\\b(True|False)\\b"
+				},
+				{
+					"name": "entity.name.tag.taype",
+					"match": "\\b[[:upper:]][[:alnum:]_']+\\b"
+				},
+				{
+					"name": "entity.name.tag.obliv.taype",
+					"match": "`(inl|inr)\\b"
+				}
+			]
+		},
+		"line_comment": {
+			"name": "comment.line.double-dash.taype",
+			"begin": "--",
+			"end": "$"
+		},
+		"block_comment": {
+			"name": "comment.block.taype",
+			"begin": "\\{-",
+			"end": "-\\}",
+			"patterns": [
+				{
+					"include": "#block_comment"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"include": "#line_comment"
+				},
+				{
+					"include": "#block_comment"
+				}
+			]
+		}
+	},
+	"scopeName": "source.taype"
+}

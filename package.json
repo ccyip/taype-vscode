@@ -1,0 +1,25 @@
+{
+  "name": "taype-lang",
+  "displayName": "Taype Lang",
+  "description": "Syntax highlighting for taype lang",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "taype",
+      "aliases": ["Taype", "taype"],
+      "extensions": [".tp"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "taype",
+      "scopeName": "source.taype",
+      "path": "./syntaxes/taype.tmLanguage.json"
+    }]
+  }
+}
