@@ -1,9 +1,10 @@
 {
-  "name": "taype-lang",
-  "displayName": "Taype Lang",
-  "description": "Syntax highlighting for taype lang",
+  "name": "taype",
+  "displayName": "Taype",
+  "description": "Syntax highlighting for the taype language",
   "version": "0.0.1",
   "repository": "https://github.com/ccyip/taype-vscode",
+  "publisher": "ccyip",
   "engines": {
     "vscode": "^1.73.0"
   },
