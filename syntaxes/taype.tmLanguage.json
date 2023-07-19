@@ -13,81 +13,81 @@
 		"keywords": {
 			"patterns": [
 				{
-					"name": "keyword.other.taype",
-					"match": "(?<![\\w`~$])(data|fn|obliv)(?![\\w#])"
+					"match": "\\b(fn|fn')\\s+(\\$?~?[[:alnum:]_']+(#[[:alnum:]_']+)+\\b)",
+					"captures": {
+						"1": { "name": "keyword.other.taype" },
+						"2": { "name": "variable.other.taype" }
+					}
+				},
+				{
+					"match": "\\b(fn|fn')\\s+(\\$?~?[[:alnum:]_']+)",
+					"captures": {
+						"1": { "name": "keyword.other.taype" },
+						"2": { "name": "entity.name.function.taype" }
+					}
+				},
+				{
+					"match": "\\b(data|obliv)\\s+(~?[[:alnum:]_']+)",
+					"captures": {
+						"1": { "name": "keyword.other.taype" },
+						"2": { "name": "entity.name.type.taype" }
+					}
 				},
 				{
 					"name": "keyword.control.taype",
-					"match": "(?<![\\w`~$])(let|in|if|then|else|mux|case|of|end|tape)(?![\\w#])"
+					"match": "\\b(let|in|if|then|else|match|with|end|mux)\\b"
 				},
 				{
 					"name": "keyword.control.obliv.taype",
-					"match": "`(if|case)(?![\\w#])"
-				},
-				{
-					"name": "support.type.taype",
-					"match": "(?<![\\w`~$#])(unit|bool|int|@)(?![\\w#])"
-				},
-				{
-					"name": "support.type.obliv.taype",
-					"match": "(?<![\\w`~$])`(bool|int)(?![\\w#])"
+					"match": "~(if|match)\\b"
 				},
 				{
 					"name": "keyword.operator.taype",
-					"match": "(\\\\|->|:|=|\\||,|<=|==|\\+|-|\\*|/|&&|\\|\\|)"
+					"match": "(\\\\|->|=>|:|=|\\||<=|==|\\+|-|\\*|/|&&|\\|\\|)"
 				},
 				{
 					"name": "keyword.operator.obliv.taype",
-					"match": "`(<=|==|\\+|-|\\*|/|&&|\\|\\|)"
+					"match": "~(<=|==|\\+|-|\\*|/|&&|\\|\\|)"
 				},
 				{
 					"name": "support.function.taype",
-					"match": "(?<![\\w`~$])(not|s_bool|r_bool|s_int|r_int|@new|@concat|@slice)(?![\\w#])"
+					"match": "\\b(not)\\b"
 				},
 				{
 					"name": "support.function.obliv.taype",
-					"match": "(?<![\\w`~$])`not(?![\\w#])"
+					"match": "~(not|prt|prl|prr)\\b"
 				},
 				{
 					"name": "constant.numeric.taype",
-					"match": "(?<![\\w`~$])[\\d]+(?![\\w#])"
+					"match": "\\b[[:digit:]]+\\b"
 				},
 				{
-					"name": "constant.language.taype",
-					"match": "(?<![\\w`~$])(True|False)(?![\\w#])"
+					"name": "constant.language.capital-identifier.taype",
+					"match": "\\b[[:upper:]][[:alnum:]_']*\\b"
 				},
 				{
-					"name": "entity.name.tag.taype",
-					"match": "(?<![\\w`$])~?[[:upper:]][[:alnum:]_']+(?![\\w#])"
+					"name": "constant.language.capital-identifier.obliv.taype",
+					"match": "~(inl|inr)\\b"
 				},
 				{
-					"name": "entity.name.tag.obliv.taype",
-					"match": "(?<![\\w`~$])`(inl|inr)(?![\\w#])"
+					"name": "variable.other.taype",
+					"match": "\\$?~?[[:alnum:]_']+(#[[:alnum:]_']+)+\\b"
+				},
+				{
+					"name": "variable.language.taype",
+					"match": "%[^ ]+\\b"
 				}
 			]
 		},
 		"line_comment": {
-			"name": "comment.line.double-dash.taype",
-			"begin": "--",
+			"name": "comment.line.double-slash.taype",
+			"begin": "//",
 			"end": "$"
-		},
-		"block_comment": {
-			"name": "comment.block.taype",
-			"begin": "\\{-",
-			"end": "-\\}",
-			"patterns": [
-				{
-					"include": "#block_comment"
-				}
-			]
 		},
 		"comments": {
 			"patterns": [
 				{
 					"include": "#line_comment"
-				},
-				{
-					"include": "#block_comment"
 				}
 			]
 		}

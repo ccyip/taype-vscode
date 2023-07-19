@@ -2,7 +2,7 @@
   "name": "taype",
   "displayName": "Taype",
   "description": "Syntax highlighting for the taype language",
-  "version": "0.0.7",
+  "version": "0.2.0",
   "repository": "https://github.com/ccyip/taype-vscode",
   "publisher": "ccyip",
   "engines": {
