@@ -66,8 +66,8 @@
 					"match": "\\b[[:upper:]][[:alnum:]_']*\\b"
 				},
 				{
-					"name": "constant.language.capital-identifier.obliv.taype",
-					"match": "~(inl|inr)\\b"
+					"name": "constant.language.capital-identifier.builtin.taype",
+					"match": "\\b(true|false|inl|inr)\\b|~(inl|inr)\\b"
 				},
 				{
 					"name": "variable.other.taype",
