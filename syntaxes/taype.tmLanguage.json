@@ -70,11 +70,11 @@
 					"match": "\\b(true|false|inl|inr)\\b|~(inl|inr)\\b"
 				},
 				{
-					"name": "variable.other.taype",
+					"name": "entity.name.tag.taype",
 					"match": "\\$?~?[[:alnum:]_']+(#[[:alnum:]_']+)+\\b"
 				},
 				{
-					"name": "variable.language.taype",
+					"name": "meta.definition.variable.taype",
 					"match": "%[^ ]+\\b"
 				}
 			]
