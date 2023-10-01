@@ -18,7 +18,7 @@
         ["#(", ")"]
     ],
     "indentationRules": {
-        "decreaseIndentPattern": "^\\s*(end|with|in|else)\\b",
+        "decreaseIndentPattern": "^\\s*(with|in|else)\\b",
         "increaseIndentPattern": "\\b(let|fn|fn'|obliv|data) ~?[[:alnum:]_'#]+( [^ ]+)* =\\s*$|(->|=>)[ \\t]*$|\\bif\\s+.*\\sthen$|\\belse",
         "indentNextLinePattern": "(?!\\bif.*then.*else.*)\\bif|\\bthen[ \\t]*$|\\belse[ \\t]*$$"
     },
