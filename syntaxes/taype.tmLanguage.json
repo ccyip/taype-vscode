@@ -16,7 +16,7 @@
 					"match": "\\b(fn|fn')\\s+(\\$?~?[[:alnum:]_']+(#[[:alnum:]_']+)+\\b)",
 					"captures": {
 						"1": { "name": "keyword.other.taype" },
-						"2": { "name": "variable.other.taype" }
+						"2": { "name": "entity.name.tag.taype" }
 					}
 				},
 				{
