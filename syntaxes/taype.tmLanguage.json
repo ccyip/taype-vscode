@@ -13,7 +13,7 @@
 		"keywords": {
 			"patterns": [
 				{
-					"match": "\\b(fn|fn')\\s+(\\$?~?[[:alnum:]_']+(#[[:alnum:]_']+)+\\b)",
+					"match": "\\b(fn|fn')\\s+(\\$?~?[[:alnum:]_']+(#~?[[:alnum:]_']+)+\\b)",
 					"captures": {
 						"1": { "name": "keyword.other.taype" },
 						"2": { "name": "entity.name.tag.taype" }
@@ -71,7 +71,7 @@
 				},
 				{
 					"name": "entity.name.tag.taype",
-					"match": "\\$?~?[[:alnum:]_']+(#[[:alnum:]_']+)+\\b"
+					"match": "\\$?~?[[:alnum:]_']+(#~?[[:alnum:]_']+)+\\b"
 				},
 				{
 					"name": "meta.definition.variable.taype",
